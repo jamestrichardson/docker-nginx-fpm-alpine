@@ -1,4 +1,5 @@
-FROM alpine:3.24
+# Base image pinned by digest so a moved tag cannot change what is built. Update with the tag.
+FROM alpine:3.24@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a
 
 ARG ALPINE_PACKAGES="php85-iconv php85-pdo_mysql php85-pdo_pgsql php85-openssl php85-simplexml"
 ARG COMPOSER_PACKAGES="aws/aws-sdk-php google/cloud-storage"
